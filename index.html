@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The African Trail — Navigate Africa's Ancient Heritage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        The African <span>Trail</span>
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#heritage">Heritage</a></li>
+        <li><a href="#experiences">Experiences</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <a href="#explore" class="btn btn--outline nav__cta">Start Your Trail</a>
+      <button class="nav__hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu__close" id="mobileClose" aria-label="Close menu">&times;</button>
+    <ul>
+      <li><a href="#destinations" class="mobile-link">Destinations</a></li>
+      <li><a href="#heritage" class="mobile-link">Heritage</a></li>
+      <li><a href="#experiences" class="mobile-link">Experiences</a></li>
+      <li><a href="#about" class="mobile-link">About</a></li>
+    </ul>
+    <a href="#explore" class="btn btn--gold mobile-link">Start Your Trail</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <img
+        src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=1800&auto=format&fit=crop&q=80"
+        alt="Vibrant African culture with traditional attire"
+        class="hero__img"
+        id="heroImg"
+      />
+      <div class="hero__overlay"></div>
+    </div>
+
+    <div class="hero__content">
+      <div class="hero__eyebrow">
+        <span class="eyebrow-line"></span>
+        Navigate Africa's Ancient Heritage
+        <span class="eyebrow-line"></span>
+      </div>
+      <h1 class="hero__title">
+        Discover the stories,<br />
+        cultures and <em>hidden wonders</em><br />
+        of Africa
+      </h1>
+      <p class="hero__sub">
+        The world's most ancient continent holds thousands of untold stories.<br />
+        Walk its trails. Feel its roots. Carry its legacy.
+      </p>
+      <div class="hero__actions">
+        <a href="#destinations" class="btn btn--gold">Begin Exploring</a>
+        <a href="#about" class="btn btn--ghost">Watch Our Story</a>
+      </div>
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="stat-num" data-target="54">0</span>
+          <span class="stat-lbl">Countries</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="stat-num" data-target="3000">0</span>
+          <span class="stat-lbl">Heritage Sites</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="stat-num" data-target="2000">0</span>
+          <span class="stat-lbl">Languages</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__scroll-hint" id="scrollHint">
+      <span>Scroll to explore</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee">
+      <div class="marquee__track">
+        <span>Ghana</span><span class="dot">·</span>
+        <span>Kenya</span><span class="dot">·</span>
+        <span>Egypt</span><span class="dot">·</span>
+        <span>Nigeria</span><span class="dot">·</span>
+        <span>Ethiopia</span><span class="dot">·</span>
+        <span>Tanzania</span><span class="dot">·</span>
+        <span>Morocco</span><span class="dot">·</span>
+        <span>Senegal</span><span class="dot">·</span>
+        <span>Zimbabwe</span><span class="dot">·</span>
+        <span>Uganda</span><span class="dot">·</span>
+        <span>Ivory Coast</span><span class="dot">·</span>
+        <span>Rwanda</span><span class="dot">·</span>
+        <span>Madagascar</span><span class="dot">·</span>
+        <!-- duplicate for seamless loop -->
+        <span>Ghana</span><span class="dot">·</span>
+        <span>Kenya</span><span class="dot">·</span>
+        <span>Egypt</span><span class="dot">·</span>
+        <span>Nigeria</span><span class="dot">·</span>
+        <span>Ethiopia</span><span class="dot">·</span>
+        <span>Tanzania</span><span class="dot">·</span>
+        <span>Morocco</span><span class="dot">·</span>
+        <span>Senegal</span><span class="dot">·</span>
+        <span>Zimbabwe</span><span class="dot">·</span>
+        <span>Uganda</span><span class="dot">·</span>
+        <span>Ivory Coast</span><span class="dot">·</span>
+        <span>Rwanda</span><span class="dot">·</span>
+        <span>Madagascar</span><span class="dot">·</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTRO STRIP -->
+  <section class="intro-strip">
+    <div class="container">
+      <p class="intro-strip__text">
+        <em>The African Trail</em> is your guide to the continent's most sacred destinations,
+        timeless traditions, and unforgettable cultural experiences — curated by people who call Africa home.
+      </p>
+    </div>
+  </section>
+
+  <!-- DESTINATIONS -->
+  <section class="section destinations" id="destinations">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__eyebrow">Featured Destinations</span>
+        <h2 class="section__title">Walk the most storied trails</h2>
+        <p class="section__sub">Four corners of a continent. Thousands of years of living heritage.</p>
+      </div>
+      <div class="dest-grid">
+
+        <article class="dest-card" data-aos>
+          <div class="dest-card__img dest-card__img--ghana">
+            <img src="images/ghana.jpg" alt="Ghana landscape" class="dest-card__photo" />
+            <div class="dest-card__region">West Africa</div>
+            <div class="dest-card__overlay-text">Ghana</div>
+          </div>
+        </article>
+
+        <article class="dest-card" data-aos>
+          <div class="dest-card__img dest-card__img--kenya">
+            <img src="images/kenya.jpg" alt="Kenya landscape" class="dest-card__photo" />
+            <div class="dest-card__region">East Africa</div>
+            <div class="dest-card__overlay-text">Kenya</div>
+          </div>
+        </article>
+
+        <article class="dest-card" data-aos>
+          <div class="dest-card__img dest-card__img--egypt">
+            <img src="images/egypt.jpg" alt="Egypt landscape" class="dest-card__photo" />
+            <div class="dest-card__region">North Africa</div>
+            <div class="dest-card__overlay-text">Egypt</div>
+          </div>
+        </article>
+
+        <article class="dest-card" data-aos>
+          <div class="dest-card__img dest-card__img--nigeria">
+            <img src="images/nigeria.jpg" alt="Nigeria landscape" class="dest-card__photo" />
+            <div class="dest-card__region">West Africa</div>
+            <div class="dest-card__overlay-text">Nigeria</div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HERITAGE SPLIT SECTION -->
+  <section class="section heritage-split" id="heritage">
+    <div class="container heritage-split__inner">
+      <div class="heritage-split__visual">
+        <img
+          src="Africa_Tourism.jpg"
+          class="heritage-split__img"
+        />
+        <div class="heritage-split__badge">
+          <span class="badge-num">3,000+</span>
+          <span class="badge-lbl">Heritage sites catalogued</span>
+        </div>
+      </div>
+      <div class="heritage-split__copy">
+        <span class="section__eyebrow">Ancient Heritage</span>
+        <h2 class="section__title">Africa is deeper than you imagine</h2>
+        <p class="heritage-split__text">
+          Beyond the safaris and the sunsets lies a continent of extraordinary
+          intellectual, spiritual, and artistic legacy. From the libraries of
+          Timbuktu to the rock churches of Lalibela — every stone has a story.
+        </p>
+        <ul class="heritage-list">
+          <li>
+            <span class="heritage-list__icon">◈</span>
+            <div>
+              <strong>Oral traditions</strong>
+              <p>Stories passed through generations that no textbook has captured.</p>
+            </div>
+          </li>
+          <li>
+            <span class="heritage-list__icon">◈</span>
+            <div>
+              <strong>Sacred architecture</strong>
+              <p>Pyramids, great walls, and ancient cities built without modern tools.</p>
+            </div>
+          </li>
+          <li>
+            <span class="heritage-list__icon">◈</span>
+            <div>
+              <strong>Living cultures</strong>
+              <p>Traditions still practiced today — festivals, rites, and ceremonies.</p>
+            </div>
+          </li>
+        </ul>
+        <a href="#" class="btn btn--gold">Discover the heritage</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES / WHY US -->
+  <section class="section features" id="experiences">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__eyebrow">Why The African Trail</span>
+        <h2 class="section__title">Built for real explorers</h2>
+        <p class="section__sub">Not a tourist directory. A living guide to what Africa truly is.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feat-card" data-aos>
+          <div class="feat-card__icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg>
+          </div>
+          <h3 class="feat-card__title">Deep heritage guides</h3>
+          <p class="feat-card__desc">Go beyond brochures. Every destination comes with cultural context, oral histories, and local wisdom passed down through generations.</p>
+        </div>
+        <div class="feat-card" data-aos>
+          <div class="feat-card__icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z"/></svg>
+          </div>
+          <h3 class="feat-card__title">Curated trail maps</h3>
+          <p class="feat-card__desc">Navigate heritage sites, sacred grounds, and cultural landmarks with trails curated by African-born guides who know each path intimately.</p>
+        </div>
+        <div class="feat-card" data-aos>
+          <div class="feat-card__icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/></svg>
+          </div>
+          <h3 class="feat-card__title">Community voices</h3>
+          <p class="feat-card__desc">Read stories and accounts from a growing community of global explorers — each one a trail that has already been walked and can be yours.</p>
+        </div>
+        <div class="feat-card" data-aos>
+          <div class="feat-card__icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/></svg>
+          </div>
+          <h3 class="feat-card__title">Multilingual access</h3>
+          <p class="feat-card__desc">Africa speaks thousands of languages. Our guides are being built in English, French, Swahili, Hausa, and Yoruba — and growing every month.</p>
+        </div>
+        <div class="feat-card" data-aos>
+          <div class="feat-card__icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z"/><path d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z"/></svg>
+          </div>
+          <h3 class="feat-card__title">Visual storytelling</h3>
+          <p class="feat-card__desc">Photography and documentary film made by Africans, for the world. See the continent through eyes that have lived it, not just visited.</p>
+        </div>
+        <div class="feat-card" data-aos>
+          <div class="feat-card__icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/></svg>
+          </div>
+          <h3 class="feat-card__title">Verified local experts</h3>
+          <p class="feat-card__desc">Every trail is reviewed by heritage custodians, local historians, and cultural experts. No content goes live without African validation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE / TESTIMONY -->
+  <section class="quote-section">
+    <div class="quote-section__bg">
+      <img
+        src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1800&auto=format&fit=crop&q=80"
+        alt="African sunset over ancient landscape"
+        class="quote-section__img"
+      />
+      <div class="quote-section__overlay"></div>
+    </div>
+    <div class="container quote-section__content">
+      <div class="quote-mark">"</div>
+      <blockquote class="quote-text">
+        Africa is not a destination —<br />it is a homecoming. Every trail here<br />leads deeper into who we all are.
+      </blockquote>
+      <cite class="quote-cite">— Amara Osei, Heritage traveller, Accra</cite>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section" id="explore">
+    <div class="container cta-section__inner">
+      <div class="cta-section__copy">
+        <span class="section__eyebrow">Your journey starts here</span>
+        <h2 class="cta-section__title">Ready to walk the trail?</h2>
+        <p class="cta-section__sub">
+          Join thousands of explorers navigating Africa's ancient heritage.
+          Create a free account and pick your first destination today.
+        </p>
+        <div class="cta-section__actions">
+          <a href="#" class="btn btn--gold btn--lg">Start exploring Africa</a>
+          <a href="#" class="btn btn--ghost btn--lg">Browse destinations</a>
+        </div>
+      </div>
+      <div class="cta-section__visual">
+        <img
+          src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=700&auto=format&fit=crop&q=80"
+          alt="Traditional African cultural celebration"
+          class="cta-section__img"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="about">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <div class="footer__logo">The African <span>Trail</span></div>
+        <p class="footer__tagline">
+          A heritage tourism guide to the African continent — built with love, respect, and deep curiosity.
+        </p>
+      </div>
+      <div class="footer__links">
+        <div class="footer__col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#">Destinations</a></li>
+            <li><a href="#">Heritage sites</a></li>
+            <li><a href="#">Trail maps</a></li>
+            <li><a href="#">Experiences</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Learn</h4>
+          <ul>
+            <li><a href="#">Cultural guides</a></li>
+            <li><a href="#">Oral traditions</a></li>
+            <li><a href="#">History library</a></li>
+            <li><a href="#">Community</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Our team</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <span>© 2025 The African Trail. All rights reserved.</span>
+        <span>Made with respect for the continent.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
