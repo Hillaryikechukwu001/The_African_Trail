@@ -473,6 +473,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   overflow: hidden;
   display: flex;
   align-items: flex-end;
+  height: 260px;
   padding: 1rem;
   background: #1a1a18;
 }
@@ -481,14 +482,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: center;
+  object-fit: cover;
+  object-position: cover;
   display: block;
 }
-.dest-card__img--ghana   { min-height: 180px; }
-.dest-card__img--kenya   { min-height: 180px; }
-.dest-card__img--egypt   { min-height: 180px; }
-.dest-card__img--nigeria { min-height: 180px; }
+.dest-card__img--ghana   { min-height: 260px; }
+.dest-card__img--kenya   { min-height: 260px; }
+.dest-card__img--egypt   { min-height: 260px; }
+.dest-card__img--nigeria { min-height: 260px; }
 
 /* NEW */
 .dest-card__region {
