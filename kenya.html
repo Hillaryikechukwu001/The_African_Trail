@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kenya — The African Trail</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="country.css" />
+</head>
+<body>
+
+  <nav class="cnav" id="cnav">
+    <div class="cnav__inner">
+      <a href="index.html" class="cnav__back">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5M5 12l7-7M5 12l7 7"/></svg>
+        The African Trail
+      </a>
+      <div class="cnav__country">Kenya</div>
+      <ul class="cnav__sites" id="cnavSites">
+        <li><a href="#masai-mara">Masai Mara</a></li>
+        <li><a href="#amboseli">Amboseli</a></li>
+        <li><a href="#lamu">Lamu Old Town</a></li>
+        <li><a href="#nairobi-museum">Nairobi Museum</a></li>
+      </ul>
+      <button class="cnav__hamburger" id="cHamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="cmobile" id="cMobile">
+    <button class="cmobile__close" id="cClose">&times;</button>
+    <ul>
+      <li><a href="#masai-mara" class="cmobile-link">Masai Mara</a></li>
+      <li><a href="#amboseli" class="cmobile-link">Amboseli</a></li>
+      <li><a href="#lamu" class="cmobile-link">Lamu Old Town</a></li>
+      <li><a href="#nairobi-museum" class="cmobile-link">Nairobi Museum</a></li>
+    </ul>
+  </div>
+
+  <section class="chero">
+    <div class="chero__bg">
+      <img src="img9.jpg" alt="Kenya landscape" class="chero__img" />
+      <div class="chero__overlay"></div>
+    </div>
+    <div class="chero__content">
+      <span class="chero__eyebrow">East Africa</span>
+      <h1 class="chero__title">Kenya</h1>
+      <p class="chero__sub">Where the Great Rift Valley meets the Indian Ocean — a land of epic migrations, Maasai warriors, Swahili civilisations, and some of the most dramatic landscapes on earth.</p>
+      <div class="chero__meta">
+        <div class="chero__stat"><span class="chero__stat-num">23</span><span class="chero__stat-lbl">National Parks</span></div>
+        <div class="chero__divider"></div>
+        <div class="chero__stat"><span class="chero__stat-num">2M+</span><span class="chero__stat-lbl">Visitors yearly</span></div>
+        <div class="chero__divider"></div>
+        <div class="chero__stat"><span class="chero__stat-num">42</span><span class="chero__stat-lbl">Ethnic communities</span></div>
+      </div>
+    </div>
+    <div class="chero__scroll">
+      <span>Explore destinations</span>
+      <div class="chero__arrow"></div>
+    </div>
+  </section>
+
+  <section class="cintro">
+    <div class="container">
+      <p class="cintro__text">Kenya is the birthplace of humanity — with fossils in the Rift Valley dating back millions of years. Today it is also the birthplace of a new kind of tourism: one rooted in conservation, community, and a deep respect for the land and its people.</p>
+    </div>
+  </section>
+
+  <section class="csites" id="sites">
+    <div class="container">
+
+      <article class="csite" id="masai-mara">
+        <div class="csite__visual">
+          <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=900&auto=format&fit=crop&q=80" alt="Masai Mara Great Migration" class="csite__img" />
+          <div class="csite__num">01</div>
+        </div>
+        <div class="csite__body">
+          <span class="csite__tag">Wildlife Reserve</span>
+          <h2 class="csite__name">Masai Mara National Reserve</h2>
+          <p class="csite__desc">The Masai Mara is arguably the greatest wildlife spectacle on earth. Named after the Maasai people who have inhabited the land for centuries, the reserve covers 1,510 square kilometres of open grassland and is home to the "Big Five" year-round. Between July and October, over 1.5 million wildebeest, zebras, and gazelles thunder across the Mara River in the Great Migration — a natural event that has no equal on the planet.</p>
+          <p class="csite__desc">Beyond the wildlife, the Mara is inseparable from Maasai culture. Visiting community conservancies on the reserve's edges connects travellers to a way of life refined over centuries — cattle herding, beadwork, warrior traditions, and a deep spiritual relationship with the land that modern conservation now depends on.</p>
+          <ul class="csite__facts">
+            <li><span class="csite__fact-label">Location</span> Narok County, Rift Valley</li>
+            <li><span class="csite__fact-label">Best time to visit</span> July – October (migration)</li>
+            <li><span class="csite__fact-label">Entry</span> USD 80 adults (non-residents)</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="csite csite--reverse" id="amboseli">
+        <div class="csite__visual">
+          <img src="https://images.unsplash.com/photo-1549366021-9f761d450615?w=900&auto=format&fit=crop&q=80" alt="Amboseli elephants and Kilimanjaro" class="csite__img" />
+          <div class="csite__num">02</div>
+        </div>
+        <div class="csite__body">
+          <span class="csite__tag">UNESCO Biosphere Reserve</span>
+          <h2 class="csite__name">Amboseli National Park</h2>
+          <p class="csite__desc">Amboseli offers one of Africa's most iconic vistas: a herd of free-roaming elephants silhouetted against the snow-capped peak of Mount Kilimanjaro, rising 5,895 metres across the Tanzanian border. This park is home to some of the largest and most studied elephant populations in Africa, with family herds that researchers have tracked across generations.</p>
+          <p class="csite__desc">The park's swamps, fed by underground springs from Kilimanjaro's glaciers, attract enormous concentrations of wildlife in the dry season. Amboseli is also central to efforts to rebuild trust between Maasai communities and conservation bodies — a model for community-based wildlife management being adopted across the continent.</p>
+          <ul class="csite__facts">
+            <li><span class="csite__fact-label">Location</span> Kajiado County, southern Kenya</li>
+            <li><span class="csite__fact-label">Best time to visit</span> June – October</li>
+            <li><span class="csite__fact-label">Entry</span> USD 60 adults (non-residents)</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="csite" id="lamu">
+        <div class="csite__visual">
+          <img src="https://images.unsplash.com/photo-1589553416260-f586c8f1514f?w=900&auto=format&fit=crop&q=80" alt="Lamu Old Town Swahili architecture" class="csite__img" />
+          <div class="csite__num">03</div>
+        </div>
+        <div class="csite__body">
+          <span class="csite__tag">UNESCO World Heritage Site</span>
+          <h2 class="csite__name">Lamu Old Town</h2>
+          <p class="csite__desc">Founded in the 14th century, Lamu Old Town is one of the oldest and best-preserved Swahili settlements in East Africa. Its narrow coral-stone streets, carved wooden doors, and rooftop terraces have remained virtually unchanged for seven centuries — a living museum of a maritime civilisation that once connected the African coast to Arabia, Persia, and the Indian subcontinent.</p>
+          <p class="csite__desc">No motor vehicles operate in Lamu town — donkeys and wooden dhows remain the primary modes of transport. The Lamu Cultural Festival, held annually, celebrates Swahili poetry, dhow racing, and the traditions of a people whose identity is woven equally from African, Arab, and Indian threads.</p>
+          <ul class="csite__facts">
+            <li><span class="csite__fact-label">Location</span> Lamu County, Kenyan coast</li>
+            <li><span class="csite__fact-label">Best time to visit</span> June – September</li>
+            <li><span class="csite__fact-label">Entry</span> Free (museum KES 500)</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="csite csite--reverse" id="nairobi-museum">
+        <div class="csite__visual">
+          <img src="https://images.unsplash.com/photo-1611348586804-61bf6c080437?w=900&auto=format&fit=crop&q=80" alt="Nairobi National Museum" class="csite__img" />
+          <div class="csite__num">04</div>
+        </div>
+        <div class="csite__body">
+          <span class="csite__tag">Cultural Institution</span>
+          <h2 class="csite__name">Nairobi National Museum</h2>
+          <p class="csite__desc">The Nairobi National Museum is Kenya's premier cultural institution, housing an extraordinary collection that spans palaeontology, natural history, ethnography, and contemporary African art. The museum's collection of hominid fossils — including the famous skull of Homo habilis found by Richard Leakey at Lake Turkana — anchors Kenya's place in the story of human evolution.</p>
+          <p class="csite__desc">The adjoining Snake Park, the Gallery of Kenyan History, and the rotating exhibitions of modern Kenyan artists make this a destination that rewards repeated visits. The museum grounds also hold the Joy Adamson Gallery, celebrating the author of Born Free and Kenya's relationship with its big cats.</p>
+          <ul class="csite__facts">
+            <li><span class="csite__fact-label">Location</span> Museum Hill, Nairobi</li>
+            <li><span class="csite__fact-label">Best time to visit</span> Year-round</li>
+            <li><span class="csite__fact-label">Entry</span> KES 1,200 adults</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <footer class="cfooter">
+    <div class="container cfooter__inner">
+      <div>
+        <div class="cfooter__logo">The African <span>Trail</span></div>
+        <p class="cfooter__copy">© 2025 The African Trail. All rights reserved.</p>
+      </div>
+      <a href="index.html" class="btn btn--outline">← Back to all destinations</a>
+    </div>
+  </footer>
+
+  <script src="country.js"></script>
+</body>
+</html>
