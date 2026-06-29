@@ -267,25 +267,29 @@
     <h1 class="page-title">Welcome Back</h1>
     <p class="page-subtitle">Sign in to continue Exploring</p>
 
-    <div class="field-group">
-      <label class="field-label" for="si-email">Email address</label>
-      <input class="field-input" id="si-email" type="email" placeholder="Enter your email" />
-    </div>
+    <form id="signin-form">
 
-    <div class="field-group">
-      <label class="field-label" for="si-pw">Password</label>
-      <input class="field-input" id="si-pw" type="password" placeholder="Enter your password" />
-    </div>
+  <div class="field-group">
+    <label class="field-label" for="si-email">Email address</label>
+    <input class="field-input" id="si-email" type="email" placeholder="Enter your email" />
+  </div>
 
-    <div class="options-row">
-      <label class="remember-label">
-        <input type="checkbox" id="si-remember" />
-        Remember me
-      </label>
-      <a class="forgot-link" href="#">Forgot password?</a>
-    </div>
+  <div class="field-group">
+    <label class="field-label" for="si-pw">Password</label>
+    <input class="field-input" id="si-pw" type="password" placeholder="Enter your password" />
+  </div>
 
-    <button class="signin-btn" type="button">Sign In</button>
+  <div class="options-row">
+    <label class="remember-label">
+      <input type="checkbox" id="si-remember" />
+      Remember me
+    </label>
+    <a class="forgot-link" href="#">Forgot password?</a>
+  </div>
+
+  <button class="signin-btn" type="submit">Sign In</button>
+
+</form>
 
     <div class="or-row">or</div>
 
@@ -313,6 +317,18 @@
 
   </div>
 </div>
+
+<script>
+  document.getElementById('signin-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    localStorage.setItem('tat_user', 'true');
+
+    const redirect = localStorage.getItem('tat_redirect') || 'index.html#destinations';
+    localStorage.removeItem('tat_redirect');
+    window.location.href = redirect;
+  });
+</script>
 
 </body>
 </html>

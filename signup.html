@@ -223,27 +223,31 @@
   <div class="left">
    <a href="index.html" class="title__logo">The African <span>Trail</span></a>
 
-    <div class="field-group">
-      <label class="field-label" for="f-name">Name</label>
-      <input class="field-input" id="f-name" type="text" placeholder="Enter your name" />
-    </div>
+<form id="signup-form">
 
-    <div class="field-group">
-      <label class="field-label" for="f-email">Email address</label>
-      <input class="field-input" id="f-email" type="email" placeholder="Enter your email" />
-    </div>
+  <div class="field-group">
+    <label class="field-label" for="f-name">Name</label>
+    <input class="field-input" id="f-name" type="text" placeholder="Enter your name" />
+  </div>
 
-    <div class="field-group">
-      <label class="field-label" for="f-pw">Password</label>
-      <input class="field-input" id="f-pw" type="password" placeholder="Enter your password" />
-    </div>
+  <div class="field-group">
+    <label class="field-label" for="f-email">Email address</label>
+    <input class="field-input" id="f-email" type="email" placeholder="Enter your email" />
+  </div>
 
-    <div class="terms-row">
-      <input type="checkbox" id="f-terms" />
-      <label for="f-terms">I agree to the <a href="#">terms &amp; policy</a></label>
-    </div>
+  <div class="field-group">
+    <label class="field-label" for="f-pw">Password</label>
+    <input class="field-input" id="f-pw" type="password" placeholder="Enter your password" />
+  </div>
 
-    <button class="signup-btn" type="button">Signup</button>
+  <div class="terms-row">
+    <input type="checkbox" id="f-terms" />
+    <label for="f-terms">I agree to the <a href="#">terms &amp; policy</a></label>
+  </div>
+
+  <button class="signup-btn" type="submit">Sign Up</button>
+
+</form>
 
     <div class="or-row">or</div>
 
@@ -279,6 +283,20 @@
   </div>
 
 </div>
+<script>
+  document.getElementById('signup-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Mock: save user as logged in
+    localStorage.setItem('tat_user', 'true');
+
+    // After signup, send them to the intended destination or homepage
+    const redirect = localStorage.getItem('tat_redirect') || 'index.html#destinations';
+    localStorage.removeItem('tat_redirect');
+    window.location.href = redirect;
+  });
+</script>
+
 
 </body>
 </html>

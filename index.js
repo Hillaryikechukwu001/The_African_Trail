@@ -124,5 +124,16 @@
       scrollHint.style.opacity = '0';
     }, { passive: true, once: true });
   }
-
+/* ---- PROTECTED DESTINATION LINKS ---- */
+document.querySelectorAll('.dest-card__link-wrap[data-dest]').forEach(link => {
+  link.addEventListener('click', function (e) {
+    const isLoggedIn = localStorage.getItem('tat_user');
+    if (!isLoggedIn) {
+      e.preventDefault();
+      localStorage.setItem('tat_redirect', this.dataset.dest);
+      window.location.href = 'signin.html';
+    }
+    // if logged in, the normal href takes over — no JS needed
+  });
+});
 })();

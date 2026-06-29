@@ -1,6 +1,12 @@
 (function () {
   'use strict';
 
+  // Guard: redirect to signin if not logged in
+if (!localStorage.getItem('tat_user')) {
+  localStorage.setItem('tat_redirect', window.location.pathname.split('/').pop());
+  window.location.href = 'signin.html';
+}
+
   /* ---- NAV SCROLL ---- */
   const cnav = document.getElementById('cnav');
   window.addEventListener('scroll', () => {
