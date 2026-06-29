@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Egypt — The African Trail</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="country.css" />
+</head>
+<body>
+
+  <nav class="cnav" id="cnav">
+    <div class="cnav__inner">
+      <a href="index.html" class="cnav__back">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5M5 12l7-7M5 12l7 7"/></svg>
+        The African Trail
+      </a>
+      <div class="cnav__country">Egypt</div>
+      <ul class="cnav__sites" id="cnavSites">
+        <li><a href="#giza">Giza Pyramids</a></li>
+        <li><a href="#luxor">Luxor Temple</a></li>
+        <li><a href="#egyptian-museum">Egyptian Museum</a></li>
+        <li><a href="#abu-simbel">Abu Simbel</a></li>
+      </ul>
+      <button class="cnav__hamburger" id="cHamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="cmobile" id="cMobile">
+    <button class="cmobile__close" id="cClose">&times;</button>
+    <ul>
+      <li><a href="#giza" class="cmobile-link">Giza Pyramids</a></li>
+      <li><a href="#luxor" class="cmobile-link">Luxor Temple</a></li>
+      <li><a href="#egyptian-museum" class="cmobile-link">Egyptian Museum</a></li>
+      <li><a href="#abu-simbel" class="cmobile-link">Abu Simbel</a></li>
+    </ul>
+  </div>
+
+  <section class="chero">
+    <div class="chero__bg">
+      <img src="img8.jpg" alt="Egypt landscape" class="chero__img" />
+      <div class="chero__overlay"></div>
+    </div>
+    <div class="chero__content">
+      <span class="chero__eyebrow">North Africa</span>
+      <h1 class="chero__title">Egypt</h1>
+      <p class="chero__sub">The cradle of one of humanity's greatest civilisations — where monuments built 5,000 years ago still command wonder, and the Nile has sustained life and culture without interruption since the dawn of history.</p>
+      <div class="chero__meta">
+        <div class="chero__stat"><span class="chero__stat-num">7</span><span class="chero__stat-lbl">UNESCO Sites</span></div>
+        <div class="chero__divider"></div>
+        <div class="chero__stat"><span class="chero__stat-num">15M+</span><span class="chero__stat-lbl">Visitors yearly</span></div>
+        <div class="chero__divider"></div>
+        <div class="chero__stat"><span class="chero__stat-num">5,000</span><span class="chero__stat-lbl">Years of civilisation</span></div>
+      </div>
+    </div>
+    <div class="chero__scroll">
+      <span>Explore destinations</span>
+      <div class="chero__arrow"></div>
+    </div>
+  </section>
+
+  <section class="cintro">
+    <div class="container">
+      <p class="cintro__text">Egypt is not merely a destination — it is a chapter of the human story. Along the banks of the Nile, pharaohs built temples to the gods, scholars wrote the world's first books, and artists painted ceilings that still astonish architects today.</p>
+    </div>
+  </section>
+
+  <section class="csites" id="sites">
+    <div class="container">
+
+      <article class="csite" id="giza">
+        <div class="csite__visual">
+          <img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?w=900&auto=format&fit=crop&q=80" alt="Pyramids of Giza" class="csite__img" />
+          <div class="csite__num">01</div>
+        </div>
+        <div class="csite__body">
+          <span class="csite__tag">Ancient Wonder of the World</span>
+          <h2 class="csite__name">The Pyramids of Giza</h2>
+          <p class="csite__desc">The only surviving wonder of the ancient world, the Pyramids of Giza have stood on the edge of the Sahara for over 4,500 years. Built as royal tombs for Pharaohs Khufu, Khafre, and Menkaure, the Great Pyramid of Khufu — originally 146 metres tall — remained the tallest man-made structure on earth for nearly 3,800 years. The precision of their construction, using over 2.3 million stone blocks, continues to astonish engineers and archaeologists today.</p>
+          <p class="csite__desc">The adjacent Great Sphinx, carved from a single limestone outcrop and measuring 73 metres in length, has stood watch over the plateau for millennia. The Giza Plateau at sunset, when the monuments turn amber against the desert sky, is among the most profound visual experiences anywhere on earth.</p>
+          <ul class="csite__facts">
+            <li><span class="csite__fact-label">Location</span> Giza Plateau, Greater Cairo</li>
+            <li><span class="csite__fact-label">Best time to visit</span> October – April</li>
+            <li><span class="csite__fact-label">Entry</span> EGP 450 adults</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="csite csite--reverse" id="luxor">
+        <div class="csite__visual">
+          <img src="https://images.unsplash.com/photo-1562679299-9d13ff2dfcd6?w=900&auto=format&fit=crop&q=80" alt="Luxor Temple at night" class="csite__img" />
+          <div class="csite__num">02</div>
+        </div>
+        <div class="csite__body">
+          <span class="csite__tag">Ancient City of Thebes</span>
+          <h2 class="csite__name">Luxor Temple & Karnak</h2>
+          <p class="csite__desc">Luxor has been called "the world's greatest open-air museum" — and no title is more earned. The city sits atop ancient Thebes, the capital of New Kingdom Egypt, and is home to an unrivalled concentration of temples, tombs, and monuments spanning 1,500 years of continuous construction. The Karnak Temple Complex alone took 2,000 years and 30 pharaohs to build.</p>
+          <p class="csite__desc">Across the Nile lies the Valley of the Kings, where 63 royal tombs have been discovered, including the intact tomb of Tutankhamun unearthed by Howard Carter in 1922. The painted walls inside these tombs — depicting the journey of the soul through the afterlife — represent some of the most extraordinary art ever created by human hands.</p>
+          <ul class="csite__facts">
+            <li><span class="csite__fact-label">Location</span> Luxor, Upper Egypt</li>
+            <li><span class="csite__fact-label">Best time to visit</span> October – March</li>
+            <li><span class="csite__fact-label">Entry</span> EGP 360 (Luxor Temple)</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="csite" id="egyptian-museum">
+        <div class="csite__visual">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&auto=format&fit=crop&q=80" alt="Egyptian Museum Cairo" class="csite__img" />
+          <div class="csite__num">03</div>
+        </div>
+        <div class="csite__body">
+          <span class="csite__tag">World-Class Museum</span>
+          <h2 class="csite__name">The Egyptian Museum, Cairo</h2>
+          <p class="csite__desc">The Egyptian Museum in Tahrir Square houses the most important collection of ancient Egyptian artefacts in existence — over 120,000 objects spanning three millennia of civilisation. The museum's centrepiece is the Tutankhamun Gallery, displaying the treasures found inside his intact tomb: golden death masks, jewelled sarcophagi, chariots, and thousands of objects crafted for eternity.</p>
+          <p class="csite__desc">The Royal Mummy Room contains the preserved remains of some of Egypt's most powerful pharaohs — including Ramesses II, Seti I, and Hatshepsut — allowing visitors to stand in the presence of rulers who shaped the ancient world. The Grand Egyptian Museum near Giza, opened in 2023, now houses even larger collections with state-of-the-art presentation.</p>
+          <ul class="csite__facts">
+            <li><span class="csite__fact-label">Location</span> Tahrir Square, Cairo</li>
+            <li><span class="csite__fact-label">Best time to visit</span> Year-round (early morning)</li>
+            <li><span class="csite__fact-label">Entry</span> EGP 300 adults</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="csite csite--reverse" id="abu-simbel">
+        <div class="csite__visual">
+          <img src="https://images.unsplash.com/photo-1544923408-75c5cef46f14?w=900&auto=format&fit=crop&q=80" alt="Abu Simbel temples" class="csite__img" />
+          <div class="csite__num">04</div>
+        </div>
+        <div class="csite__body">
+          <span class="csite__tag">UNESCO World Heritage Site</span>
+          <h2 class="csite__name">Abu Simbel Temples</h2>
+          <p class="csite__desc">Carved entirely from a sandstone cliff by Ramesses II around 1264 BCE, the twin temples of Abu Simbel stand as the most audacious architectural achievement of the ancient world. The four colossal statues of Ramesses II guarding the Great Temple each stand 20 metres tall. Twice a year — on February 22 and October 22 — sunlight penetrates the inner sanctuary to illuminate the faces of the gods within.</p>
+          <p class="csite__desc">In a feat of modern engineering to match the ancient one, the entire temple complex was relocated 65 metres uphill between 1964 and 1968 to save it from the rising waters of Lake Nasser. This UNESCO-led operation remains the largest archaeological rescue operation in history.</p>
+          <ul class="csite__facts">
+            <li><span class="csite__fact-label">Location</span> Aswan Governorate, southern Egypt</li>
+            <li><span class="csite__fact-label">Best time to visit</span> Oct – Feb (Feb 22 sun alignment)</li>
+            <li><span class="csite__fact-label">Entry</span> EGP 540 adults</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <footer class="cfooter">
+    <div class="container cfooter__inner">
+      <div>
+        <div class="cfooter__logo">The African <span>Trail</span></div>
+        <p class="cfooter__copy">© 2025 The African Trail. All rights reserved.</p>
+      </div>
+      <a href="index.html" class="btn btn--outline">← Back to all destinations</a>
+    </div>
+  </footer>
+
+  <script src="country.js"></script>
+</body>
+</html>
