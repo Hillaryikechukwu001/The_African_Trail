@@ -221,11 +221,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    to top,
-    rgba(26,15,4,0.92) 0%,
-    rgba(26,15,4,0.55) 40%,
-    rgba(26,15,4,0.25) 70%,
-    rgba(26,15,4,0.1) 100%
+    135deg,
+    rgba(26,15,4,0.82) 0%,
+    rgba(44,31,14,0.65) 50%,
+    rgba(26,26,24,0.55) 100%
   );
 }
 .chero__content {
@@ -359,9 +358,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .csite {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 560px;
+  display: block;
+  padding: 4rem 0;
   border-bottom: 1px solid var(--ivory-deep);
   opacity: 0;
   transform: translateY(32px);
@@ -371,13 +369,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   opacity: 1;
   transform: translateY(0);
 }
-.csite--reverse { direction: rtl; }
-.csite--reverse > * { direction: ltr; }
 
 .csite__visual {
   position: relative;
   overflow: hidden;
-  min-height: 480px;
+  width: 100%;
+  height: 460px;
+  border-radius: var(--radius-lg);
+  margin-bottom: 2.5rem;
 }
 .csite__img {
   width: 100%;
@@ -403,13 +402,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .csite__body {
-  padding: 3.5rem;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: var(--white);
 }
-.csite--reverse .csite__body { background: var(--ivory); }
 
 .csite__tag {
   display: inline-block;
@@ -531,12 +530,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .chero__title { font-size: clamp(42px, 10vw, 64px); }
   .chero__meta { gap: 1.5rem; }
 
-  .csite {
-    grid-template-columns: 1fr;
-    min-height: auto;
-    direction: ltr;
-  }
-  .csite--reverse { direction: ltr; }
+  
   .csite__visual { min-height: 300px; }
   .csite__body { padding: 2rem 1.5rem; background: var(--white) !important; }
   .csite__num { font-size: 44px; }
