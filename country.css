@@ -1,5 +1,7 @@
 /* ============================================================
    country.css — Shared styles for all country destination pages
+   Restructured responsive system: mobile-first, fluid clamp()
+   spacing/type, intrinsic media sizing, modern breakpoints.
    ============================================================ */
 
 /* ---------- TOKENS ---------- */
@@ -31,8 +33,20 @@
   --radius-xl:   24px;
 
   --max-w:   1200px;
-  --cnav-h:  72px;
   --transition: 0.3s ease;
+
+  /* Fluid spacing/layout tokens — scale smoothly between mobile and desktop
+     instead of snapping at hard breakpoints. */
+  --space-xs:  clamp(0.5rem, 0.4rem + 0.5vw, 0.75rem);
+  --space-sm:  clamp(0.75rem, 0.6rem + 0.75vw, 1.25rem);
+  --space-md:  clamp(1.25rem, 1rem + 1.25vw, 2rem);
+  --space-lg:  clamp(2rem, 1.5rem + 2.5vw, 3.5rem);
+  --space-xl:  clamp(3rem, 2rem + 5vw, 7rem);
+
+  --container-pad: clamp(1.25rem, 1rem + 1.5vw, 2rem);
+
+  /* Nav height also scales fluidly instead of jumping 72px -> 64px */
+  --cnav-h: clamp(60px, 56px + 1.5vw, 72px);
 }
 
 /* ---------- RESET ---------- */
@@ -55,7 +69,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   width: 100%;
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 var(--container-pad);
 }
 
 /* ---------- BUTTON ---------- */
@@ -101,20 +115,19 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .cnav__inner {
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 var(--container-pad);
   height: 100%;
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: clamp(0.75rem, 0.5rem + 1vw, 2rem);
 }
 .cnav__back {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 18px;
-  font: weight 700px;
-  color: var(--ivory-deep);
+  font-size: clamp(15px, 14px + 0.3vw, 18px);
   font-weight: 400;
+  color: var(--ivory-deep);
   transition: color var(--transition);
   flex-shrink: 0;
   white-space: nowrap;
@@ -122,16 +135,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .cnav__back:hover { color: var(--gold-light); }
 .cnav__country {
   font-family: var(--font-display);
-  font-size: 18px;
+  font-size: clamp(16px, 15px + 0.3vw, 18px);
   font-weight: 700;
   color: var(--gold-dark);
   flex-shrink: 0;
   margin-right: auto;
+  white-space: nowrap;
 }
 .cnav__sites {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: clamp(0.75rem, 0.5rem + 1vw, 2rem);
 }
 .cnav__sites a {
   font-size: 14px;
@@ -144,7 +158,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .cnav__sites a.active { color: var(--gold-light); }
 
 .cnav__hamburger {
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 5px;
   padding: 4px;
@@ -160,7 +174,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* ---------- MOBILE MENU ---------- */
 .cmobile {
-  display: none;
+  display: flex;
   position: fixed;
   inset: 0;
   z-index: 200;
@@ -181,17 +195,24 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .cmobile ul a {
   font-family: var(--font-display);
-  font-size: 26px;
+  font-size: clamp(22px, 20px + 1.5vw, 26px);
   color: var(--ivory);
   font-weight: 400;
 }
 .cmobile ul a:hover { color: var(--gold-light); }
 .cmobile__close {
   position: absolute;
-  top: 1.5rem; right: 2rem;
+  top: 1.5rem; right: var(--container-pad);
   font-size: 36px;
   color: var(--sand-light);
   line-height: 1;
+}
+
+/* Nav switches from mobile hamburger to full inline menu at tablet-landscape+.
+   min-width query = mobile-first: this is the enhancement, not the default. */
+@media (min-width: 900px) {
+  .cnav__hamburger { display: none; }
+  .cmobile { display: none; }
 }
 
 /* ============================================================
@@ -199,8 +220,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    ============================================================ */
 .chero {
   position: relative;
+  /* svh/dvh avoid the iOS/Android address-bar jump that 100vh causes */
   height: 100vh;
-  min-height: 580px;
+  height: 100svh;
+  min-height: 480px;
   display: flex;
   align-items: flex-end;
   overflow: hidden;
@@ -234,7 +257,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   width: 100%;
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 0 2rem 4rem;
+  padding: 0 var(--container-pad) clamp(2rem, 1.5rem + 2vw, 4rem);
 }
 .chero__eyebrow {
   display: inline-block;
@@ -249,7 +272,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .chero__title {
   font-family: var(--font-display);
-  font-size: clamp(52px, 9vw, 96px);
+  font-size: clamp(38px, 8vw, 96px);
   font-weight: 700;
   line-height: 1.0;
   color: var(--ivory-deep);
@@ -269,8 +292,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .chero__meta {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 2.5rem;
+  gap: clamp(1rem, 0.75rem + 1vw, 2.5rem);
   opacity: 0;
   animation: fadeUp 0.7s 0.8s ease forwards;
 }
@@ -292,10 +316,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   width: 1px;
   height: 36px;
   background: rgba(255,255,255,0.2);
+  align-self: stretch;
 }
 .chero__scroll {
   position: absolute;
-  bottom: 2rem;
+  bottom: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
@@ -325,12 +350,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   50%       { transform: rotate(45deg) translateY(5px); }
 }
 
+/* Hide the little scroll cue on short mobile viewports where it collides with content */
+@media (max-width: 479px) {
+  .chero__scroll { display: none; }
+}
+
 /* ============================================================
    INTRO
    ============================================================ */
 .cintro {
   background: var(--ivory);
-  padding: 3.5rem 0;
+  padding: var(--space-lg) 0;
   border-bottom: 1px solid var(--ivory-deep);
 }
 .cintro__text {
@@ -349,7 +379,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    SITES
    ============================================================ */
 .csites {
-  padding: 5rem 0 7rem;
+  padding: var(--space-xl) 0;
   background: var(--cream);
 }
 .csites .container {
@@ -360,7 +390,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .csite {
   display: block;
-  padding: 4rem 0;
+  padding: var(--space-lg) 0;
   border-bottom: 1px solid var(--ivory-deep);
   opacity: 0;
   transform: translateY(32px);
@@ -375,9 +405,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 460px;
+  /* Intrinsic sizing: scales with viewport width instead of a fixed 460px
+     that either crops badly on narrow screens or gets too tall on wide ones. */
+  aspect-ratio: 16 / 10;
+  max-height: 520px;
   border-radius: var(--radius-lg);
-  margin-bottom: 2.5rem;
+  margin-bottom: var(--space-md);
 }
 .csite__img {
   width: 100%;
@@ -393,7 +426,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   top: 1.5rem;
   left: 1.5rem;
   font-family: var(--font-display);
-  font-size: 64px;
+  font-size: clamp(36px, 4vw, 64px);
   font-weight: 700;
   line-height: 1;
   color: rgba(255,255,255,0.12);
@@ -405,7 +438,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .csite__body {
   max-width: 720px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 var(--space-sm);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -426,7 +459,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .csite__name {
   text-align: center;
   font-family: var(--font-display);
-  font-size: clamp(24px, 3vw, 34px);
+  font-size: clamp(22px, 3vw, 34px);
   font-weight: 700;
   color: var(--earth);
   line-height: 1.15;
@@ -452,7 +485,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .csite__facts li {
   display: flex;
-  gap: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.75rem;
   font-size: 13px;
   color: var(--text-muted);
   align-items: baseline;
@@ -464,7 +498,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   text-transform: uppercase;
   color: var(--gold-dark);
   flex-shrink: 0;
-  min-width: 120px;
+  min-width: 100px;
 }
 
 /* ============================================================
@@ -472,14 +506,15 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    ============================================================ */
 .cfooter {
   background: var(--charcoal);
-  padding: 2.5rem 0;
+  padding: var(--space-md) 0;
   border-top: 1px solid rgba(200,146,42,0.15);
 }
 .cfooter__inner {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  gap: var(--space-sm);
 }
 .cfooter__logo {
   font-family: var(--font-display);
@@ -516,39 +551,40 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 /* ============================================================
-   RESPONSIVE
+   RESPONSIVE — mobile-first (min-width) with modern breakpoints:
+   480 / 640 / 768 / 1024 / 1280. Base rules above already cover
+   phones; these layer on enhancements as viewport grows.
    ============================================================ */
-@media (max-width: 1024px) {
-  .cnav__sites { gap: 1.25rem; }
-  .cnav__sites a { font-size: 12px; }
-  .csite__body { padding: 2.5rem; }
+
+/* Small phones: tighten a couple of things that clamp() can't fully solve */
+@media (max-width: 380px) {
+  .csite__fact-label { min-width: 84px; }
+  .chero__title { font-size: clamp(32px, 9vw, 40px); }
 }
 
-@media (max-width: 960px) {
-  :root { --cnav-h: 64px; }
-  .cnav__sites { display: none; }
-  .cnav__hamburger { display: flex; }
-  .cmobile { display: flex; }
-
-  .chero { min-height: 520px; }
-  .chero__title { font-size: clamp(42px, 10vw, 64px); }
-  .chero__meta { gap: 1.5rem; }
-
-  
-  .csite__visual { min-height: 300px; }
-  .csite__body { padding: 2rem 1.5rem; background: var(--white) !important; }
-  .csite__num { font-size: 44px; }
-
-  .cfooter__inner { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+/* ≥640px — large phones / small tablets portrait */
+@media (min-width: 640px) {
+  .csite__visual { aspect-ratio: 16 / 9; }
+  .cfooter__inner { flex-wrap: nowrap; }
 }
 
-@media (max-width: 480px) {
-  .chero__meta { flex-direction: column; gap: 1rem; align-items: flex-start; }
-  .chero__divider { display: none; }
-  .csite__visual { min-height: 240px; }
-  .csite__body { padding: 1.75rem 1.25rem; }
-  .csite__fact-label { min-width: 100px; }
-  .container { padding: 0 1.25rem; }
+/* ≥768px — tablets */
+@media (min-width: 768px) {
+  .csite__body { padding: 0 var(--space-md); }
+  .csite__facts li { flex-wrap: nowrap; }
+}
+
+/* ≥900px — nav becomes full inline menu (see .cnav__hamburger rule above) */
+
+/* ≥1024px — small desktops / tablet landscape */
+@media (min-width: 1024px) {
+  .csite__visual { aspect-ratio: 21 / 10; }
+}
+
+/* ≥1280px — large desktops: cap fluid scaling from growing unbounded */
+@media (min-width: 1280px) {
+  .cnav__sites { gap: 2rem; }
+  .cnav__sites a { font-size: 14px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
