@@ -143,7 +143,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   white-space: nowrap;
 }
 .cnav__sites {
-  display: flex;
+  display: none;
   align-items: center;
   gap: clamp(0.75rem, 0.5rem + 1vw, 2rem);
 }
@@ -210,9 +210,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* Nav switches from mobile hamburger to full inline menu at tablet-landscape+.
    min-width query = mobile-first: this is the enhancement, not the default. */
-@media (min-width: 900px) {
-  .cnav__hamburger { display: none; }
-  .cmobile { display: none; }
+@media (min-width:900px){
+  .cnav__hamburger{display:none}
+  .cmobile{display:none}
+  .cnav__sites{display:flex}
 }
 
 /* ============================================================
@@ -579,6 +580,24 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* ≥1024px — small desktops / tablet landscape */
 @media (min-width: 1024px) {
   .csite__visual { aspect-ratio: 21 / 10; }
+
+  /* Alternating image/text layout for .csite / .csite--reverse */
+  .csite {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+  }
+  .csite--reverse {
+    flex-direction: row-reverse;
+  }
+  .csite__visual {
+    flex: 1 1 55%;
+    margin-bottom: 0;
+  }
+  .csite__body {
+    flex: 1 1 45%;
+    padding: 0 var(--space-md);
+  }
 }
 
 /* ≥1280px — large desktops: cap fluid scaling from growing unbounded */
